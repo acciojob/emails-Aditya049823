@@ -27,21 +27,11 @@ public class Email {
         // 3. It contains at least one lowercase letter
         // 4. It contains at least one digit
         // 5. It contains at least one special character. Any character apart from alphabets and digits is a special character
-        if(oldPassword.equals(password))
-        {
-            if(isValid(newPassword))
-            {
-                this.password=newPassword;
-                System.out.println("Password changed sucessfully");
+        if(oldPassword.equals(password)) {
+            if (isValid(newPassword)) {
+                this.password = newPassword;
+                //System.out.println("Password changed sucessfully");
             }
-            else
-            {
-                System.out.println("Invalid Password");
-            }
-        }
-        else
-        {
-            System.out.println("Password is incorrect");
         }
     }
     private Boolean isValid(String newPassword)
