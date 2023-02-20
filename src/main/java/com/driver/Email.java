@@ -59,11 +59,11 @@ public class Email {
                 isSpecial = true;
             }
         }
-            if(isUpper && isLower && isDigit && isSpecial)
-            {
-                return true;
-            }
-            return false;
+        if(isUpper && isLower && isDigit && isSpecial)
+        {
+            return true;
+        }
+        return false;
     }
 }
 
