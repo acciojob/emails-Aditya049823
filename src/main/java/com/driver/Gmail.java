@@ -85,21 +85,21 @@ public class Gmail extends Email {
 
     public int getInboxSize(){
         // Return number of mails in inbox
-        return inbox.size();
+        return this.inbox.size();
     }
 
     public int getTrashSize(){
         // Return number of mails in Trash
-            return trash.size();
+            return this.trash.size();
     }
 
     public void emptyTrash(){
         // clear all mails in the trash
-        trash.clear();
+        this.trash.clear();
     }
 
     public int getInboxCapacity() {
         // Return the maximum number of mails that can be stored in the inbox
-        return inboxCapacity;
+        return this.inboxCapacity;
     }
 }

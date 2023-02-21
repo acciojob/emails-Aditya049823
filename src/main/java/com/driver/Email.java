@@ -43,20 +43,19 @@ public class Email {
             System.out.println("The entered password does not match");
         }
     }
-    private Boolean isValid(String newPassword)
-    {
-        Boolean isUpper=false;
-        Boolean isLower=false;
-        Boolean isDigit=false;
-        Boolean isSpecial=false;
-        int len=newPassword.length();
+    private Boolean isValid(String newPassword) {
+        Boolean isUpper = false;
+        Boolean isLower = false;
+        Boolean isDigit = false;
+        Boolean isSpecial = false;
+        boolean islen=false;
+        int len = newPassword.length();
 
-        if(len<8)
-        {
-            return false;
+        if (len >= 8) {
+            islen=true;
         }
 
-        for(int i=0;i<newPassword.length();i++) {
+        for (int i = 0; i < newPassword.length(); i++) {
             char ch = newPassword.charAt(i);
             if ((ch >= 'A') && (ch <= 'Z')) {
                 isUpper = true;
@@ -68,11 +67,11 @@ public class Email {
                 isSpecial = true;
             }
         }
-        if(isUpper && isLower && isDigit && isSpecial)
-        {
+        if (isUpper && isLower && isDigit && isSpecial && islen) {
             return true;
+        } else {
+            return false;
         }
-        return false;
     }
 }
 
