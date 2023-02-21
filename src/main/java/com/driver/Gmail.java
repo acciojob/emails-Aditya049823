@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Gmail extends Email {
 
-     int inboxCapacity; //maximum number of mails inbox can store
+     private int inboxCapacity; //maximum number of mails inbox can store
     //Inbox: Stores mails. Each mail has date (Date), sender (String), message (String). It is guaranteed that message is distinct for all mails.
     //Trash: Stores mails. Each mail has date (Date), sender (String), message (String)
 
@@ -56,22 +56,20 @@ public class Gmail extends Email {
     public String findLatestMessage(){
         // If the inbox is empty, return null
         // Else, return the message of the latest mail present in the inbox
-        int n=inbox.size();
-        if(n==0)
+        if(inbox.isEmpty())
         {
             return "null";
         }
         else
         {
-            return inbox.get(n-1).getRight();
+            return inbox.get(inbox.size()-1).getRight();
         }
     }
 
     public String findOldestMessage(){
         // If the inbox is empty, return null
         // Else, return the message of the oldest mail present in the inbox
-        int n=inbox.size();
-        if(n==0)
+        if(inbox.isEmpty())
         {
             return "null";
         }
@@ -79,7 +77,6 @@ public class Gmail extends Email {
         {
             return inbox.get(0).getRight();
         }
-
     }
 
     public int findMailsBetweenDates(Date start, Date end){

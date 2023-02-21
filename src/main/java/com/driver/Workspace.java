@@ -17,8 +17,6 @@ public class Workspace extends Gmail{
         this.calendar=new ArrayList<>();
     }
 
-
-
     public void addMeeting(Meeting meeting){
         //add the meeting to calendar
         calendar.add(meeting);
@@ -40,13 +38,13 @@ public class Workspace extends Gmail{
         int count=0;
         if(!endTym.isEmpty())
         {
-            count++;
+            count+=1;
         }
-        for(int i=0;i<endTym.size();i++)
+        for(int i=1;i<endTym.size();i++)
         {
             if(calendar.get(endTym.get(i).getRight()).getStartTime().compareTo(tym_limit)>0)
             {
-                count++;
+                count+=1;
                 tym_limit=endTym.get(i).getLeft();
             }
         }
