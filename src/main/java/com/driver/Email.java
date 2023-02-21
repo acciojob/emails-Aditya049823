@@ -1,5 +1,6 @@
 package com.driver;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Email {
@@ -30,8 +31,16 @@ public class Email {
         if(oldPassword.equals(password)) {
             if (isValid(newPassword)) {
                 this.password = newPassword;
-                //System.out.println("Password changed sucessfully");
+                System.out.println("Password changed sucessfully");
             }
+            else
+            {
+                System.out.println("The new Password is not valid");
+            }
+        }
+        else
+        {
+            System.out.println("The entered password does not match");
         }
     }
     private Boolean isValid(String newPassword)
