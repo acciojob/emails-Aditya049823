@@ -90,7 +90,7 @@ public class Gmail extends Email {
         {
             if((inbox.get(i).getLeft().compareTo(start)>=0) && (inbox.get(i).getLeft().compareTo(end)<=0))
             {
-                count++;
+                count+=1;
             }
         }
         return count;

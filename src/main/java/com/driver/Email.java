@@ -51,7 +51,7 @@ public class Email {
             char ch = newPassword.charAt(i);
             if ((ch >= 'A') && (ch <= 'Z')) {
                 isUpper = true;
-            } else if ((ch >= 'a') && (ch >= 'z')) {
+            } else if ((ch >= 'a') && (ch <= 'z')) {
                 isLower = true;
             } else if ((ch >= '0') && (ch <= '9')) {
                 isDigit = true;
